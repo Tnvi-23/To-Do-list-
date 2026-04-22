@@ -1,11 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>TO-Do List App</title>
-    <link rel = "stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h2>My To-Do List</h2>
-    <input type="text" id="taskInput" placeholder="Enter Task!">
-    <button oneclick="addtask()">Add Task</button>
-    <ul id="tasklist"></ul>
+    <div id="new">
+    <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    </div>
+    <ul id="taskList"></ul>
+
     <script src="script.js"></script>
 </body>
+</html>
