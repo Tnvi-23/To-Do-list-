@@ -1,84 +1,174 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f099e1;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-}
-
-h2 {
-    color: #333;
-}
-
-.input-container {
-    display: flex;
-    justify-content: center;   /* center horizontally */
+.full{
     align-items: center;
-    gap: 10px;                 /* spacing between input and button */
-    margin-bottom: 20px;
-
-    /* New styles for background and width */
-    background-color: #aa497b; /* light pink background */
-    padding: 15px;
-    border-radius: 8px;
-    width: 300px;              /* control width */
-    margin: 0 auto;            /* center the box itself */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* optional shadow */
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+body{
+    background-color: rgb(244, 232, 218);
+}
+input{
+    border-radius: 4px;
+}
+button{
+    border-radius: 4px;
+    background-color: rgb(219, 161, 235);
+}
+.form-container {
+    padding: 2px;
+    text-align: center;
+    background-color: rgb(118, 56, 128);
+    width: 250px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+form input, form button {
+    padding: 5px;
+    margin: 8px;
+}
+.log{
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.log{
+    margin: 0 auto;        /* horizontally center */
+    text-align: center;
 }
 
-
-#taskInput {
+.task-container {
+    display: flex;
+    justify-content: center;  
+}
+.task{
+    background-color: rgb(143, 91, 152); 
+    padding: 3px;
+    border-radius: 4px;
+}
+.logged{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.box{
+    background-color: rgb(238, 106, 66);
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
     padding: 10px;
-    width: 200px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.body {
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
+    height: 100vh;             /* full viewport height */
+    margin: 0;
+}
+.reg {
+    color: #0a0b0b;          /* dark gray text */
+    text-decoration: none;   /* remove underline */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;         /* still shows pointer on hover */
+}
+
+.reg:hover {
+    text-decoration: underline; /* optional subtle hover effect */
+    color: #000;                /* slightly darker on hover */
+}
+.body1 {
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
+    height: 100vh;
+    margin: 0;
+    
+}
+
+.register-box {
+    width: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: rgb(144, 84, 146);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;    /* stack label + input vertically */
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
-button {
-    padding: 10px;
-    margin-left: 5px;
-    cursor: pointer;
-    border: none;
-    background: #ca5db2;
-    color: rgb(77, 34, 75);
-    border-radius: 4px;
+.loginn{
+    background-color: rgb(225, 156, 131);
 }
 
-button:hover {
-    background: #c87acb;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    max-width: 400px;
-    margin: auto;
-}
-
-li {
-    background: #fff;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
+/* Top bar */
+.topbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 20px;
 }
 
-li.completed {
-    text-decoration: line-through;
-    color: gray;
-}
-
-.delete-btn {
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
+.menu-toggle {
     cursor: pointer;
+    font-size: 24px;
 }
 
-.delete-btn:hover {
-    background: darkred;
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px; /* hidden by default */
+    width: 220px;
+    height: 100%;
+    background: #34495e;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.active {
+    left: 0; /* slide in */
+}
+
+.sidebar a {
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #2c3e50;
+}
+
+/* Logout fixed at bottom */
+.logout-link {
+    margin-top: auto;
+    padding: 20px;
+}
+
+/* Main content */
+.content {
+    padding: 20px;
 }
